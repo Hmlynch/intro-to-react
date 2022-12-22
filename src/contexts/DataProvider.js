@@ -46,7 +46,7 @@ export const DataProvider = function(props) {
         // const response = await fetch(`https://chief-flat-goose.glitch.me/api/post/${id}`)
         // const data = await response.json()
         // return data
-        const docRef = doc(db, 'user', uid, 'posts', id)
+        const docRef = doc(db, 'users', uid, 'posts', id)
         const docSnap = await getDoc(docRef)
 
         const userData = await getDoc(docSnap.ref.parent.parent)
